@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --clr-primary: #fff;
+  --clr-secondary: lightgray;
+  --clr-accent: #007bff;
+}
+
+@media (min-width: 575px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.2rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+body {
+  background-color: var(--clr-secondary);
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
