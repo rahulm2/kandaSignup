@@ -2,7 +2,7 @@ import React from 'react';
 import './TextInput.scss';
 
 /**
- * Returns form fields
+ * Returns form field
  * @method
  * @param {name, label, errorText, ...rest} - input event variables
  */
