@@ -28,7 +28,6 @@ function FormField({ name, label, errorText, value, ...rest }) {
  * @param {name, label, errorText, ...rest} - input event variables
  */
 function FormFieldBase({ name, label, errorText, ...rest }) {
-  console.log('rerender ' + name);
   return (
     <div id={name} className="textInput-container">
       <label htmlFor={name}>{label}</label>
