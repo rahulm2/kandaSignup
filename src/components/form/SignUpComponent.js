@@ -49,12 +49,12 @@ const Form = function () {
    * @method
    * @param {String} event - event
    */
-  const handleOnChange = (event) => {
+  const handleOnChange = useCallback((event) => {
     dispatch({
       type: CHANGE_FIELD_VALUE,
       payload: { name: event.target.name, value: event.target.value }
     });
-  };
+  }, []);
 
   return (
     <div className="main-container">
