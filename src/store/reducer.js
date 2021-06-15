@@ -1,4 +1,4 @@
-import { CHANGE_FIELD_VALUE, CHANGE_ERROR_VALUE } from '../../constants';
+import { CHANGE_FIELD_VALUE, CHANGE_ERROR_VALUE } from '../constants';
 
 /**
  * Reducer to update state based on action type

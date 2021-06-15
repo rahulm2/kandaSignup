@@ -2,7 +2,7 @@ import React, { useCallback, useContext, useState } from 'react';
 import TextInput from '../../ui-kit/FormField/TextInput';
 import ValidationSchema from '../../utils/validationschema/schema';
 import { CHANGE_FIELD_VALUE, CHANGE_ERROR_VALUE } from '../../constants';
-import { DispatchContext, StateContext } from '../../utils/store';
+import { DispatchContext, StateContext } from '../../store';
 import './SignUpComponent.scss';
 
 /**
