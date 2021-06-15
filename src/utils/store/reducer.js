@@ -1,5 +1,8 @@
 import { CHANGE_FIELD_VALUE, CHANGE_ERROR_VALUE } from '../../constants';
 
+/**
+ * Reducer to update state based on action type
+ */
 export default function reducer(state, action) {
   const { type, payload } = action;
   switch (type) {

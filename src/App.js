@@ -1,9 +1,10 @@
 import React, { useReducer } from 'react';
-import Form from './components/form/SignUpComponent';
 
+import Form from './components/form/SignUpComponent';
 import './App.scss';
 import { DispatchContext, StateContext, initialState } from './utils/store';
 import reducer from './utils/store/reducer';
+
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (

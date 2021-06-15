@@ -4,7 +4,7 @@ import './TextInput.scss';
 /**
  * Returns form fields
  * @method
- * @param {name, label, errotText, ...rest} - input event variables
+ * @param {name, label, errorText, ...rest} - input event variables
  */
 function FormField({ name, label, errorText, ...rest }) {
   return (
