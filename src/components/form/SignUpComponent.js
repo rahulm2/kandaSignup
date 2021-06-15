@@ -64,7 +64,6 @@ const Form = function () {
           <form method="post" onSubmit={handleSubmit}>
             <div className="display-inline-block">
               <FormField
-                className="firstName"
                 label="First Name"
                 type="text"
                 name="firstName"
@@ -74,7 +73,6 @@ const Form = function () {
                 data-testid="firstName"
               />
               <FormField
-                className="lastName"
                 label="Last Name"
                 type="text"
                 name="lastName"
@@ -85,7 +83,6 @@ const Form = function () {
               />
             </div>
             <FormField
-              className="email"
               label="Email"
               type="text"
               name="email"
@@ -96,7 +93,6 @@ const Form = function () {
             />
             <div className="display-inline-block">
               <FormField
-                className="password"
                 label="Password"
                 type="password"
                 name="password"
@@ -106,7 +102,6 @@ const Form = function () {
                 data-testid="password"
               />
               <FormField
-                className="confirmPassword"
                 label="Confirm Password"
                 type="password"
                 name="confirmPassword"
