@@ -18,7 +18,7 @@ const Form = function () {
    * Event Handler for submit form
    * @async
    * @method
-   * @param {String} event - event
+   * @param {Object} event - event
    */
   const handleSubmit = useCallback(
     async (event) => {
@@ -47,7 +47,7 @@ const Form = function () {
   /**
    * On Change Handler for input change
    * @method
-   * @param {String} event - event
+   * @param {Object} event - event
    */
   const handleOnChange = useCallback((event) => {
     dispatch({
