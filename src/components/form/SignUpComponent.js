@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useState } from 'react';
-import FormField from '../../ui-kit/FormField/TextInput';
+import TextInput from '../../ui-kit/FormField/TextInput';
 import ValidationSchema from '../../utils/validationschema/schema';
 import { CHANGE_FIELD_VALUE, CHANGE_ERROR_VALUE } from '../../constants';
 import { DispatchContext, StateContext } from '../../utils/store';
@@ -63,7 +63,7 @@ const Form = function () {
           <h2>Kanda Exam</h2>
           <form method="post" onSubmit={handleSubmit}>
             <div className="display-inline-block">
-              <FormField
+              <TextInput
                 label="First Name"
                 type="text"
                 name="firstName"
@@ -72,7 +72,7 @@ const Form = function () {
                 errorText={errors.firstName}
                 data-testid="firstName"
               />
-              <FormField
+              <TextInput
                 label="Last Name"
                 type="text"
                 name="lastName"
@@ -82,7 +82,7 @@ const Form = function () {
                 data-testid="lastName"
               />
             </div>
-            <FormField
+            <TextInput
               label="Email"
               type="text"
               name="email"
@@ -92,7 +92,7 @@ const Form = function () {
               data-testid="email"
             />
             <div className="display-inline-block">
-              <FormField
+              <TextInput
                 label="Password"
                 type="password"
                 name="password"
@@ -101,7 +101,7 @@ const Form = function () {
                 errorText={errors.password}
                 data-testid="password"
               />
-              <FormField
+              <TextInput
                 label="Confirm Password"
                 type="password"
                 name="confirmPassword"

@@ -6,10 +6,10 @@ import './TextInput.scss';
  * @method
  * @param {name, label, errorText, ...rest} - input event variables
  */
-function FormField({ name, label, errorText, value, ...rest }) {
+function TextInput({ name, label, errorText, value, ...rest }) {
   const child = useMemo(
     () => (
-      <FormFieldBase
+      <TextInputBase
         name={name}
         label={label}
         value={value}
@@ -27,7 +27,7 @@ function FormField({ name, label, errorText, value, ...rest }) {
  * @method
  * @param {name, label, errorText, ...rest} - input event variables
  */
-function FormFieldBase({ name, label, errorText, ...rest }) {
+function TextInputBase({ name, label, errorText, ...rest }) {
   return (
     <div id={name} className="textInput-container">
       <label htmlFor={name}>{label}</label>
@@ -37,4 +37,4 @@ function FormFieldBase({ name, label, errorText, ...rest }) {
   );
 }
 
-export default FormField;
+export default TextInput;
