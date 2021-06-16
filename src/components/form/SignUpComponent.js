@@ -56,7 +56,7 @@ const Form = function () {
     }, []);
 
     return (
-        <div className="bg-primary p-6 max-w-xl md:p-7">
+        <div className="bg-primary p-6 max-w-xl w-3/4 md:p-7 md:w-auto">
             {!formSuccessful ? (
                 <>
                     <h2>Kanda Exam</h2>
