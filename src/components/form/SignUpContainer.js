@@ -7,6 +7,10 @@ import {
 import reducer from '../../store/form/reducer';
 import Form from './SignUpComponent';
 
+/**
+ * Wraps the Signup form with context
+ * @method
+ */
 export default function SignUpContainer() {
     const [state, dispatch] = useReducer(reducer, initialState);
 

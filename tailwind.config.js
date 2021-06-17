@@ -4,7 +4,8 @@ module.exports = {
     theme: {
         colors: {
             primary: '#fff',
-            secondary: '#E5E5E5',
+            secondary: '#F9F9F9',
+            inputBorder: '#E5E5E5',
             header: '#00206A',
             accent: '#005AEC',
             error: 'red'

@@ -16,7 +16,7 @@
         @apply grid items-center pl-6 h-20 shadow-sm bg-header md:shadow-2xl;
     }
     input {
-        @apply h-5 w-full p-1 text-sm border-b border-secondary border-solid;
+        @apply h-5 w-full p-1 text-sm border-b border-inputBorder border-solid;
     }
 }
 @tailwind components;

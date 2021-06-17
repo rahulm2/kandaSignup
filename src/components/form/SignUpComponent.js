@@ -90,7 +90,7 @@ const Form = function () {
                     </form>
                 </>
             ) : (
-                <>
+                <div className="grid justify-center items-center w-50">
                     <h2>You're all set!</h2>
                     <button
                         data-testid="resubmit-button"
@@ -99,7 +99,7 @@ const Form = function () {
                     >
                         Try Again
                     </button>
-                </>
+                </div>
             )}
         </div>
     );
