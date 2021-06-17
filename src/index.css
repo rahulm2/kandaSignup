@@ -1,16 +1,19 @@
 @tailwind base;
 @layer base {
     body {
-        @apply bg-secondary;
+        @apply bg-primary md:bg-secondary;
     }
     h1 {
         @apply text-2xl;
     }
     h2 {
-        @apply text-xl font-bold my-4;
+        @apply text-xl text-center font-bold my-4;
     }
     h3 {
         @apply text-lg;
+    }
+    header {
+        @apply grid items-center pl-6 h-20 shadow-sm bg-header md:shadow-2xl;
     }
     input {
         @apply h-5 w-full p-1 text-sm border-b border-secondary border-solid;
@@ -20,7 +23,7 @@
 
 @layer components {
     .btn-blue {
-        @apply rounded-sm h-7 w-full mt-6 bg-accent text-primary md:w-24;
+        @apply flex justify-center items-center m-auto rounded-3xl w-36 leading-10  mt-6 bg-accent text-primary;
     }
     .inline-block-element {
         @apply grid grid-cols-1 items-start md:grid-cols-2 md:gap-x-5;

@@ -1,19 +1,16 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 
-import Form from './components/form/SignUpComponent';
-import { DispatchContext, StateContext, initialState } from './store';
-import reducer from './store/reducer';
+import SignUpContainer from './components/form/SignUpContainer';
+import Header from './components/header';
 
 function App() {
-    const [state, dispatch] = useReducer(reducer, initialState);
     return (
-        <StateContext.Provider value={state}>
-            <DispatchContext.Provider value={dispatch}>
-                <div className="flex justify-center items-center h-screen">
-                    <Form />
-                </div>
-            </DispatchContext.Provider>
-        </StateContext.Provider>
+        <>
+            <Header />
+            <main className="flex justify-center">
+                <SignUpContainer />
+            </main>
+        </>
     );
 }
 

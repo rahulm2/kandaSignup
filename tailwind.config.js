@@ -4,8 +4,9 @@ module.exports = {
     theme: {
         colors: {
             primary: '#fff',
-            secondary: 'lightgray',
-            accent: '#007bff',
+            secondary: '#E5E5E5',
+            header: '#00206A',
+            accent: '#005AEC',
             error: 'red'
         },
         fontSize: {
