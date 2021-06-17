@@ -5,7 +5,7 @@ import {
     initialState
 } from '../../store/form';
 import reducer from '../../store/form/reducer';
-import Form from './SignUpComponent';
+import SignUpFormContainer from '../../components/form/SignUpFormContainer';
 
 /**
  * Wraps the Signup form with context
@@ -17,7 +17,7 @@ export default function SignUpContainer() {
     return (
         <FormStateContext.Provider value={state}>
             <FormDispatchContext.Provider value={dispatch}>
-                <Form />
+                <SignUpFormContainer />
             </FormDispatchContext.Provider>
         </FormStateContext.Provider>
     );

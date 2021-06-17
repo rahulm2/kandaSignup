@@ -1,4 +1,8 @@
-import { CHANGE_FIELD_VALUE, CHANGE_ERROR_VALUE } from '../../constants';
+import {
+    CHANGE_FIELD_VALUE,
+    CHANGE_ERROR_VALUE,
+    IS_FORM_VALID
+} from '../../constants';
 
 /**
  * Reducer to update state based on action type
@@ -13,6 +17,9 @@ export default function reducer(state, action) {
         }
         case CHANGE_ERROR_VALUE: {
             return { ...state, errors: payload };
+        }
+        case IS_FORM_VALID: {
+            return { ...state, isFormValid: payload };
         }
         default:
             return state;

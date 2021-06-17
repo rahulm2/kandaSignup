@@ -21,6 +21,9 @@ module.exports = {
         },
         screens: {
             md: '575px'
+        },
+        fontFamily: {
+            nunito: ['nunito', 'sans-serif']
         }
     },
     variants: {

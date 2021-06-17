@@ -1,18 +1,20 @@
-import React, { useCallback, useContext, useState } from 'react';
-import TextInput from '../../ui-kit/FormField/TextInput';
+import React, { useCallback, useContext } from 'react';
+
 import ValidationSchema from '../../utils/validationschema/schema';
-import { CHANGE_FIELD_VALUE, CHANGE_ERROR_VALUE } from '../../constants';
+import {
+    CHANGE_FIELD_VALUE,
+    CHANGE_ERROR_VALUE,
+    IS_FORM_VALID
+} from '../../constants';
 import { FormDispatchContext, FormStateContext } from '../../store/form';
 
 /**
  * Renders the form for kanda
  * @method
  */
-const Form = function () {
+const Form = function (props) {
     const dispatch = useContext(FormDispatchContext);
-    const { formData, errors, formFields } = useContext(FormStateContext);
-
-    const [formSuccessful, setFormSuccessful] = useState(false);
+    const { formData, errors } = useContext(FormStateContext);
 
     /**
      * Event Handler for submit form
@@ -28,7 +30,10 @@ const Form = function () {
                     abortEarly: false
                 });
                 if (isValid) {
-                    setFormSuccessful(true);
+                    dispatch({
+                        type: IS_FORM_VALID,
+                        payload: true
+                    });
                 }
             } catch (err) {
                 const errors = {};
@@ -60,48 +65,19 @@ const Form = function () {
     );
 
     return (
-        <div className="rounded-3xl shadow-none mt-5 bg-primary p-2 max-w-xl w-3/4 md:p-7 md:mt-24 md:w-auto md:shadow-lg md:p-6">
-            {!formSuccessful ? (
-                <>
-                    <h2>Sign Up</h2>
-                    <form method="post" onSubmit={handleSubmit}>
-                        {formFields.map((formField) => {
-                            return (
-                                <TextInput
-                                    key={formField.fieldName}
-                                    classField={formField.className}
-                                    label={formField.label}
-                                    type={formField.type}
-                                    name={formField.fieldName}
-                                    value={formData.fieldName}
-                                    onChange={handleOnChange}
-                                    errorText={errors.fieldName}
-                                    data-testid={formField.fieldName}
-                                />
-                            );
-                        })}
-                        <button
-                            data-testid="submit-button"
-                            className="btn-blue"
-                            type="submit"
-                        >
-                            Submit
-                        </button>
-                    </form>
-                </>
-            ) : (
-                <div className="grid justify-center items-center w-50">
-                    <h2>You're all set!</h2>
-                    <button
-                        data-testid="resubmit-button"
-                        className="btn-blue"
-                        type="submit"
-                    >
-                        Try Again
-                    </button>
-                </div>
-            )}
-        </div>
+        <>
+            <h2>Sign Up</h2>
+            <form method="post" onSubmit={handleSubmit}>
+                {props.render(formData, errors, handleOnChange)}
+                <button
+                    data-testid="submit-button"
+                    className="btn-blue"
+                    type="submit"
+                >
+                    Submit
+                </button>
+            </form>
+        </>
     );
 };
 

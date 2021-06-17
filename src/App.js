@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SignUpContainer from './components/form/SignUpContainer';
+import SignUpContainer from './contexts/form/FormContextProvider';
 import Header from './components/header';
 
 function App() {
