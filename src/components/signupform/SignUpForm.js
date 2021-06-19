@@ -66,7 +66,6 @@ export default function SignUpForm() {
 	 */
 	const handleOnChange = useCallback(
 		(event) => {
-			debugger;
 			dispatch({
 				type: CHANGE_FIELD_VALUE,
 				payload: { name: event.target.name, value: event.target.value }
