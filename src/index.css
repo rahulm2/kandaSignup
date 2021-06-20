@@ -1,33 +1,33 @@
 @tailwind base;
 @layer base {
-    body {
-        @apply bg-primary md:bg-secondary;
-    }
-    h1 {
-        @apply text-2xl;
-    }
-    h2 {
-        @apply text-xl text-center font-bold my-4;
-    }
-    h3 {
-        @apply text-lg;
-    }
-    header {
-        @apply grid items-center pl-6 h-20 shadow-sm bg-header md:shadow-2xl;
-    }
-    input {
-        @apply h-5 w-full p-1 text-sm border-b border-inputBorder border-solid;
-    }
+	body {
+		@apply bg-primary md:bg-secondary;
+	}
+	h1 {
+		@apply text-2xl;
+	}
+	h2 {
+		@apply text-xl text-center font-bold my-4;
+	}
+	h3 {
+		@apply text-lg;
+	}
+	header {
+		@apply grid items-center pl-6 h-20 shadow-sm bg-header md:shadow-2xl;
+	}
+	input {
+		@apply h-5 w-full p-1 text-sm border-b border-inputBorder border-solid;
+	}
 }
 @tailwind components;
 
 @layer components {
-    .btn-blue {
-        @apply flex justify-center items-center m-auto rounded-3xl w-36 leading-10  mt-6 bg-accent text-primary;
-    }
-    .inline-block-element {
-        @apply grid grid-cols-1 items-start md:grid-cols-2 md:gap-x-5;
-    }
+	.btn-blue {
+		@apply flex justify-center items-center m-auto rounded-3xl w-32 leading-10  mt-6 bg-accent text-primary;
+	}
+	.inline-block-element {
+		@apply grid grid-cols-1 items-start md:grid-cols-2 md:gap-x-5;
+	}
 }
 
 @tailwind utilities;

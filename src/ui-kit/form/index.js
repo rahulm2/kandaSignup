@@ -33,7 +33,7 @@ const Form = function ({
 
 	return (
 		<div className={classFields}>
-			<h2>{headerName}</h2>
+			<h2 className='mb-8'>{headerName}</h2>
 			<form method='post' onSubmit={handleFormSubmit}>
 				{render(formData, errors, handleInputChange)}
 				<button

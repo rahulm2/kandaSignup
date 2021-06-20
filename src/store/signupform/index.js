@@ -32,7 +32,7 @@ export const initialState = {
 			fieldName: 'firstName',
 			label: 'First Name',
 			type: 'text',
-			className: 'md:inline-block'
+			className: 'mr-4 md:inline-block'
 		},
 		{
 			fieldName: 'lastName',
@@ -49,7 +49,7 @@ export const initialState = {
 			fieldName: 'password',
 			label: 'Password',
 			type: 'password',
-			className: 'md:inline-block'
+			className: 'mr-4 md:inline-block'
 		},
 		{
 			fieldName: 'confirmPassword',

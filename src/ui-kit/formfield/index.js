@@ -7,10 +7,7 @@ import React from 'react';
  */
 function TextInput({ name, label, errorText, classField = '', ...rest }) {
 	return (
-		<div
-			id={name}
-			className={`block relative my-1.5 mr-1.5 pb-4 pr-4 ${classField}`}
-		>
+		<div id={name} className={`block relative my-1.5 pb-4 ${classField}`}>
 			<label className='block text-tiny font-medium' htmlFor={name}>
 				{label}
 			</label>
